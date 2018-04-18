@@ -1,0 +1,24 @@
+
+orderBy('name','desc')->take(2)->get();
+
+To delete an image from storage, import illuminate…facades/storage
+if($post->cover_image !='noimage.jpg'){
+        Storage::delete('Public/cover_images/'.$post->cover_image)
+}
+
+{{--   {!! Form::open(['action'=>['DepartmentsController@store',$department->id],'method'=>'POST']) !!}  
+                    {!! Form::text('name', 'value goes here', ['class'=>'form-control','placeholder'=>'Enter Name']) !!}--}}
+                     {!! Form::open(['action'=>'DepartmentsController@store','method'=>'POST']) !!}
+                     @csrf
+                     @method('PUT')
+            <div class="form-group">
+                {!! Form::label('test', 'Test') !!}
+                {!! Form::text('name', '', ['class'=>'form-control','placeholder'=>'Enter Name']) !!}
+            </div>
+             <div class="form-group">
+                {!! Form::label('test', 'Select') !!}
+                {!! Form::checkbox('check', '', '', ['class'=>'form-control']) !!}
+            </div>
+            {!! Form::submit('Submit', ['class'=>'btn btn-primary']) !!}
+            
+        {!! Form::close() !!}

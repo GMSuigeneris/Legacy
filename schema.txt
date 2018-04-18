@@ -1,0 +1,31 @@
+faculty  hasMany departments,courses,students,moderators
+id name
+
+department belongsTo a faculty and hasMany students,moderators,courses
+
+id faculty_id name
+
+roles
+id name hasMany students,moderators and superadmin
+
+reg
+
+id level semester student_id courses status belongsTo a student
+
+courses
+
+id name code level semester dept_id faculty_id belongsTo a faculty and a department
+
+user
+
+id firstname middlename lastname username religion gender level semester dept_id faculty_id role belongsTo a faculty and a department,role and hasMany registrations
+
+moderator
+
+id firstname middlename lastname username role_id faculty_id dept_id  belongsTo a faculty and a department,role
+
+superadmin
+
+id firstname middlename lastname username role_id belongsTo a role
+
+disable default option value

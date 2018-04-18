@@ -1,0 +1,25 @@
+body{
+    background:red !important;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.links > a {
+    color: #fff;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#image{
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    float: left;
+}
